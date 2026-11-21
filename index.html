@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0e0e">
+  <meta name="description" content="Rafael Melhem, DJ e produtor. Ouça o set em destaque e conheça Almost forgotten, EP pela ALRA Records.">
+  <title>Rafael Melhem — DJ e produtor</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./config.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="contact" href="mailto:rafael.melhem@gmail.com">
+      Contato
+      <svg aria-hidden="true" width="13" height="13" viewBox="0 0 16 16" fill="none">
+        <path d="M3 13 13 3M5 3h8v8" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="artist-name">
+      <picture class="portrait">
+        <source media="(max-width: 37.5rem)" srcset="./assets/retrato-celular.webp" width="700" height="814">
+        <img src="./assets/retrato-desktop.webp" width="2080" height="890"
+             alt="Retrato em preto e branco de Rafael Melhem" fetchpriority="high">
+      </picture>
+      <div class="hero-content">
+        <h1 id="artist-name">Rafael Melhem</h1>
+        <p class="artist-role">DJ e produtor</p>
+        <div class="featured" aria-labelledby="set-heading">
+          <h2 id="set-heading">Set em destaque</h2>
+          <button class="play" id="play" type="button" disabled>
+            <span class="play-icon" aria-hidden="true"></span>
+            <span id="play-label">Ouvir set</span>
+          </button>
+          <a class="play" id="set-link" hidden><span class="play-icon" aria-hidden="true"></span>Ouvir set</a>
+          <audio id="set-audio" preload="none"></audio>
+          <p class="play-status" id="play-status" role="status">Áudio em breve.</p>
+        </div>
+      </div>
+    </section>
+    <section class="release" aria-labelledby="release-title">
+      <div class="release-inner">
+        <div class="cover">
+          <div class="cover-placeholder" id="cover-placeholder" aria-label="Capa provisória do EP" role="img">
+            <span>Almost<br>forgotten</span>
+            <small>ALRA Records</small>
+          </div>
+          <img id="cover-image" width="240" height="240" alt="Capa de Almost forgotten" hidden>
+        </div>
+        <div>
+          <p class="release-kind">EP</p>
+          <h2 id="release-title">Almost forgotten</h2>
+          <p class="release-label">ALRA Records</p>
+          <a class="release-link" id="release-link" hidden>Ouvir EP</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
