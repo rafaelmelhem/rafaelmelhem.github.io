@@ -6,7 +6,8 @@
   <meta name="theme-color" content="#0e0e0e">
   <meta name="description" content="Rafael Melhem, DJ e produtor, também conhecido como The Soul Architect. Deep house, jazz e soul em vinil.">
   <title>Rafael Melhem — DJ e produtor</title>
-  <link rel="stylesheet" href="./styles.css?v=2">
+  <link rel="stylesheet" href="./styles.css?v=3">
+  <script src="./player.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -32,11 +33,25 @@
         <p class="artist-role">DJ e produtor</p>
         <div class="featured" aria-labelledby="set-heading">
           <h2 id="set-heading">Set em destaque</h2>
-          <iframe class="mixcloud-frame" width="100%" height="120"
-                  src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Frafaelmelhem%2Fdeep-house-jan-2019-mix%2F&amp;hide_cover=1"
-                  title="Deep House – Jan 2019 Mix no Mixcloud"
-                  allow="encrypted-media; autoplay; fullscreen"></iframe>
-          <a class="mixcloud-link" href="https://www.mixcloud.com/rafaelmelhem/deep-house-jan-2019-mix/">Ouvir no Mixcloud</a>
+          <audio class="set-audio" id="set-audio" controls preload="metadata"
+                 src="./assets/rafael-melhem-vinyl-dj-set.mp3" aria-label="Vinyl DJ Set">
+            <a href="./assets/rafael-melhem-vinyl-dj-set.mp3">Abrir o MP3 do set</a>
+          </audio>
+          <div class="set-player" id="set-player" role="group" aria-label="Vinyl DJ Set" hidden>
+            <button class="set-toggle" id="set-toggle" type="button">
+              <span class="set-icon" aria-hidden="true"></span>
+              <span id="set-toggle-label">Ouvir set</span>
+            </button>
+            <div class="set-progress">
+              <input id="set-position" type="range" min="0" max="0" value="0" step="1"
+                     aria-label="Posição no set" disabled>
+              <div class="set-times" aria-hidden="true">
+                <span id="set-elapsed">0:00</span>
+                <span id="set-duration">–:––</span>
+              </div>
+            </div>
+            <p class="set-status" id="set-status" role="status" hidden></p>
+          </div>
         </div>
       </div>
     </section>

@@ -8,6 +8,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 body {
   position: relative;
   margin: 0;
@@ -107,23 +108,82 @@ h1 { font-size: clamp(3.125rem, 7.2vw, 5.75rem); }
   line-height: 1.2;
 }
 
-.mixcloud-frame {
+.set-audio {
   display: block;
   width: min(100%, 29rem);
-  height: 7.5rem;
   margin-inline: auto;
-  border: 0;
 }
 
-.mixcloud-link {
-  display: inline-block;
-  padding: .6rem .75rem;
+.set-player {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: .7rem clamp(.65rem, 3vw, 1rem);
+  width: min(100%, 29rem);
+  margin-inline: auto;
+  padding: .7rem clamp(.6rem, 2.7vw, 1rem);
+  border: 1px solid #464743;
+  border-radius: .9rem;
+  background: var(--section);
+}
+
+.set-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  min-width: 6.6rem;
+  min-height: 2.75rem;
+  padding: .55rem .65rem;
+  border: 0;
+  border-radius: 99rem;
+  background: var(--paper);
+  color: var(--hero);
+  font: 700 .875rem/1 Arial, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.set-toggle:hover { background: #fff; }
+
+.set-icon {
+  width: .58rem;
+  height: .7rem;
+  flex: 0 0 .58rem;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.set-toggle.is-playing .set-icon {
+  background: linear-gradient(to right, currentColor 0 32%, transparent 32% 68%, currentColor 68% 100%);
+  clip-path: none;
+}
+
+.set-progress input {
+  display: block;
+  width: 100%;
+  min-height: 1.5rem;
+  margin: 0;
+  accent-color: var(--paper);
+  cursor: pointer;
+}
+
+.set-progress input:disabled { cursor: default; }
+
+.set-times {
+  display: flex;
+  justify-content: space-between;
+  color: var(--secondary);
+  font-size: .75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.set-status {
+  grid-column: 1 / -1;
+  margin: 0;
   font-size: .875rem;
   color: var(--secondary);
-  text-underline-offset: .2em;
 }
-
-.mixcloud-link:hover { color: var(--paper); }
 
 .bio {
   border-top: 1px solid #60615b;
