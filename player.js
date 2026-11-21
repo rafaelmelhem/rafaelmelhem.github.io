@@ -19,6 +19,7 @@ function updateProgress() {
   const hasDuration = Number.isFinite(audio.duration) && audio.duration > 0;
   position.disabled = !hasDuration || Boolean(audio.error);
   elapsed.textContent = formatTime(audio.currentTime);
+  position.style.setProperty("--progress", hasDuration ? `${100 * audio.currentTime / audio.duration}%` : "0%");
   if (hasDuration) {
     duration.textContent = formatTime(audio.duration);
     position.max = Math.ceil(audio.duration);
