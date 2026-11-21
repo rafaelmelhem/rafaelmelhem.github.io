@@ -4,11 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0e0e0e">
-  <meta name="description" content="Rafael Melhem, DJ e produtor. Ouça o set em destaque e conheça Almost forgotten, EP pela ALRA Records.">
+  <meta name="description" content="Rafael Melhem, DJ e produtor, também conhecido como The Soul Architect. Deep house, jazz e soul em vinil.">
   <title>Rafael Melhem — DJ e produtor</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./config.js" defer></script>
-  <script src="./site.js" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=2">
 </head>
 <body>
   <header class="site-header">
@@ -34,36 +32,20 @@
         <p class="artist-role">DJ e produtor</p>
         <div class="featured" aria-labelledby="set-heading">
           <h2 id="set-heading">Set em destaque</h2>
-          <div id="mixcloud-player" hidden>
-            <iframe class="mixcloud-frame" id="mixcloud-frame" width="100%" height="60"
-                    title="Ouvir o set no player do Mixcloud" allow="encrypted-media; autoplay"></iframe>
-            <p class="play-status"><a id="mixcloud-link">Abrir no Mixcloud</a></p>
-          </div>
-          <button class="play" id="play" type="button" disabled>
-            <span class="play-icon" aria-hidden="true"></span>
-            <span id="play-label">Ouvir set</span>
-          </button>
-          <a class="play" id="set-link" hidden><span class="play-icon" aria-hidden="true"></span>Ouvir set</a>
-          <audio id="set-audio" preload="none"></audio>
-          <p class="play-status" id="play-status" role="status">Áudio em breve.</p>
+          <iframe class="mixcloud-frame" width="100%" height="120"
+                  src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Frafaelmelhem%2Fdeep-house-jan-2019-mix%2F&amp;hide_cover=1"
+                  title="Deep House – Jan 2019 Mix no Mixcloud"
+                  allow="encrypted-media; autoplay; fullscreen"></iframe>
+          <a class="mixcloud-link" href="https://www.mixcloud.com/rafaelmelhem/deep-house-jan-2019-mix/">Ouvir no Mixcloud</a>
         </div>
       </div>
     </section>
-    <section class="release" aria-labelledby="release-title">
-      <div class="release-inner">
-        <div class="cover">
-          <div class="cover-placeholder" id="cover-placeholder" aria-label="Capa provisória do EP" role="img">
-            <span>Almost<br>forgotten</span>
-            <small>ALRA Records</small>
-          </div>
-          <img id="cover-image" width="240" height="240" alt="Capa de Almost forgotten" hidden>
-        </div>
-        <div>
-          <p class="release-kind">EP</p>
-          <h2 id="release-title">Almost forgotten</h2>
-          <p class="release-label">ALRA Records</p>
-          <a class="release-link" id="release-link" hidden>Ouvir EP</a>
-        </div>
+    <section class="bio" aria-labelledby="bio-title">
+      <div class="bio-inner">
+        <h2 id="bio-title">Sobre</h2>
+        <p>Rafael Melhem é DJ e produtor paulista, com lançamentos desde 2011. Seus sets em vinil aproximam o deep house do jazz e do soul. No estúdio, essa escuta aparece nos acordes de teclado e nos timbres de Rhodes, com referências ao house dos anos 1990.</p>
+        <p>Sob o pseudônimo <strong>The Soul Architect</strong>, dividiu com Alex Agore o EP <em>Subliminal</em>, que abriu o catálogo da <strong>ALRA Records</strong> em 2015. Sua discografia inclui também <em>Voyager</em>, pela Abstract Theory, e <em>Aerowalk</em>, lançado sob seu próprio nome pela ALRA.</p>
+        <p>Em 2024, foi DJ residente aos sábados no <strong>Leila Restaurante</strong>, de Tania Bulhões, em São Paulo. Ali, suas seleções iam do jazz japonês dos anos 1970 ao deep house dos anos 1990. Também já tocou no <strong>Seen</strong>, no Tivoli Mofarrej, no <strong>Matiz Bar</strong> e no <strong>Heavy House</strong>.</p>
       </div>
     </section>
   </main>
