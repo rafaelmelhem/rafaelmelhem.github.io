@@ -1,18 +1,28 @@
-const { setAudioUrl, setLinkUrl, releaseUrl, coverUrl } = window.portfolioConfig;
+const { setMixcloudKey, setAudioUrl, setLinkUrl, releaseUrl, coverUrl } = window.portfolioConfig;
 const play = document.querySelector("#play");
 const label = document.querySelector("#play-label");
 const audio = document.querySelector("#set-audio");
 const status = document.querySelector("#play-status");
 const setLink = document.querySelector("#set-link");
 
-if (setLinkUrl && !setAudioUrl) {
+if (setMixcloudKey) {
+  const showUrl = new URL(setMixcloudKey, "https://www.mixcloud.com/");
+  const widgetUrl = new URL("https://www.mixcloud.com/widget/iframe/");
+  widgetUrl.search = new URLSearchParams({ feed: showUrl.pathname, mini: "1", hide_cover: "1" });
+
+  document.querySelector("#mixcloud-frame").src = widgetUrl.href;
+  document.querySelector("#mixcloud-link").href = showUrl.href;
+  document.querySelector("#mixcloud-player").hidden = false;
+  play.hidden = true;
+  status.hidden = true;
+} else if (setLinkUrl && !setAudioUrl) {
   setLink.href = setLinkUrl;
   setLink.hidden = false;
   play.hidden = true;
   status.textContent = "";
 }
 
-if (setAudioUrl) {
+if (!setMixcloudKey && setAudioUrl) {
   audio.src = setAudioUrl;
   play.disabled = false;
   status.textContent = "";

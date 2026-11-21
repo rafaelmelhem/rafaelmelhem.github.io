@@ -38,7 +38,13 @@ button { font: inherit; }
   padding: 1rem clamp(1.25rem, 5vw, 3.3rem) 0;
 }
 
-.contact {
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.header-links a {
   display: inline-flex;
   align-items: center;
   gap: .5rem;
@@ -48,7 +54,7 @@ button { font: inherit; }
   text-decoration: none;
 }
 
-.contact:hover, .release-link:hover { text-decoration: underline; }
+.header-links a:hover, .release-link:hover { text-decoration: underline; }
 
 .hero {
   position: relative;
@@ -102,6 +108,14 @@ h1 { font-size: clamp(3.125rem, 7.2vw, 5.75rem); }
   margin: 0 0 .55rem;
   font-size: .8125rem;
   line-height: 1.2;
+}
+
+.mixcloud-frame {
+  display: block;
+  width: min(100%, 26rem);
+  height: 3.75rem;
+  margin-inline: auto;
+  border: 0;
 }
 
 .play {
