@@ -85,7 +85,7 @@ a { color: inherit; }
 
 .hero-content { width: 100%; padding-top: clamp(20rem, 36.4vw, 31rem); }
 
-h1, .playlists h2, .bio h2 {
+h1, .playlists h2, .bio h2, .press h2 {
   margin: 0;
   font-family: var(--face);
   font-weight: 300;
@@ -227,40 +227,41 @@ h1 { font-size: clamp(3.125rem, 7.2vw, 5.75rem); }
   color: var(--secondary);
 }
 
-.playlists, .bio {
+.playlists, .bio, .press {
   border-top: 1px solid #60615b;
   padding: clamp(2.5rem, 6vw, 5rem) 1.5rem;
 }
 
 .playlists { background: #101111; }
-.bio { background: var(--section); }
+.bio, .press { background: var(--section); }
 
-.playlists-inner, .bio-inner {
+.playlists-inner, .bio-inner, .press-inner {
   width: min(100%, 40rem);
   margin-inline: auto;
 }
 
-.playlists h2, .bio h2 { font-size: clamp(2.25rem, 5vw, 3.25rem); }
+.playlists h2, .bio h2, .press h2 { font-size: clamp(2.25rem, 5vw, 3.25rem); }
 
-.playlist-list {
+.playlist-list, .press-list {
   list-style: none;
   margin: 1.4rem 0 0;
   padding: 0;
   border-bottom: 1px solid #4d4e49;
 }
 
-.playlist-list li { border-top: 1px solid #4d4e49; }
+.playlist-list li, .press-list li { border-top: 1px solid #4d4e49; }
 
-.playlist-link {
+.playlist-link, .press-link {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: .75rem 1.25rem;
   padding: 1rem .625rem;
   text-decoration: none;
 }
 
-.playlist-link:hover, .playlist-link:focus-visible { background: #1c1d1b; }
+.playlist-link { gap: .75rem 1.25rem; }
+.playlist-link:hover, .playlist-link:focus-visible,
+.press-link:hover, .press-link:focus-visible { background: #1c1d1b; }
 
 .playlist-info {
   display: grid;
@@ -273,9 +274,28 @@ h1 { font-size: clamp(3.125rem, 7.2vw, 5.75rem); }
   font-size: .875rem;
 }
 
+.playlist-description {
+  margin-top: .25rem;
+  color: var(--secondary);
+  font-size: .9375rem;
+  line-height: 1.55;
+}
+
 .playlist-action {
   text-decoration: underline;
   text-underline-offset: .2em;
+}
+
+.press-link { gap: .32rem 1rem; }
+.press-arrow { align-self: start; }
+.press-source {
+  color: var(--secondary);
+  font-size: .8125rem;
+}
+
+.press-link:hover .press-title, .press-link:focus-visible .press-title {
+  text-decoration: underline;
+  text-underline-offset: .18em;
 }
 
 .bio p {
@@ -284,6 +304,7 @@ h1 { font-size: clamp(3.125rem, 7.2vw, 5.75rem); }
   line-height: 1.7;
 }
 .bio strong { color: var(--paper); }
+.bio a { color: var(--paper); text-underline-offset: .2em; }
 
 @media (max-width: 48rem) and (min-width: 37.501rem) {
   .hero-content { padding-top: 17.25rem; }
