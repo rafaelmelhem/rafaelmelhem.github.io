@@ -6,8 +6,9 @@
   <meta name="theme-color" content="#0e0e0e">
   <meta name="description" content="Rafael Melhem, DJ e produtor musical, também conhecido como The Soul Architect. Deep house, jazz e soul em vinil.">
   <title>Rafael Melhem — DJ e produtor musical</title>
-  <link rel="stylesheet" href="./styles.css?v=6">
+  <link rel="stylesheet" href="./styles.css?v=7">
   <script src="./player.js?v=2" defer></script>
+  <script src="./films.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -62,6 +63,43 @@
         <p>Em 2024, foi DJ residente aos sábados no <strong>Leila Restaurante</strong>, de Tania Bulhões, em São Paulo. Ali, suas seleções iam do jazz japonês dos anos 1970 ao deep house dos anos 1990. Também já tocou no <strong>Seen</strong>, no Tivoli Mofarrej, no <strong>Matiz Bar</strong> e no <strong>Heavy House</strong>.</p>
         <p>Também trabalhou com identidade musical para o varejo. Para a <strong>TNG</strong>, produziu um repertório original para todas as lojas da rede. O projeto obteve isenção formal de pagamento dos direitos de execução pública (dispensa de cobrança pelo Ecad). No <strong>Grupo Valdac</strong>, foi responsável pela curadoria e pela produção musical de todas as lojas da <strong>Siberian</strong>, da <strong>Crawford</strong> e da <strong>Memove</strong>.</p>
         <p>Sob o pseudônimo <strong>The Soul Architect</strong>, dividiu com Alex Agore o EP <a href="https://rafaelmelhem.bandcamp.com/album/subliminal"><em>Subliminal</em></a>, que abriu o catálogo da <strong>ALRA Records</strong> em 2015. Sua discografia inclui também <a href="https://open.spotify.com/album/2R3NRlpwTvc8mkQRVMbxRK"><em>Voyager</em></a>, pela Abstract Theory, e <a href="https://open.spotify.com/album/6cpW4gsfW3wy8WlK2mGkQP"><em>Aerowalk</em></a>, lançado sob seu próprio nome pela ALRA. Suas produções têm o suporte de vários artistas importantes da cena, como Danilo Plessow (Motor City Drum Ensemble), Ney Faustini, Leonardo Ruas, entre outros.</p>
+      </div>
+    </section>
+    <section class="films" aria-labelledby="films-title">
+      <div class="films-inner">
+        <h2 id="films-title">Trabalhos audiovisuais</h2>
+        <ul class="film-list">
+          <li>
+            <a class="film-link" href="./assets/video/gralias-inverno-2013.mp4">
+              <span class="film-still">
+                <img src="./assets/video/gralias-inverno-2013.webp" width="640" height="360" loading="lazy" decoding="async" alt="">
+                <span class="film-play" aria-hidden="true"></span>
+              </span>
+              <span class="film-name">Desfile Gralias — Inverno 2013</span>
+              <span class="film-meta"><span class="film-credit">Seleção musical para um desfile com tema de tourada.</span><span>3:29</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="film-link" href="./assets/video/colecao-isis-gomes.mp4">
+              <span class="film-still">
+                <img src="./assets/video/colecao-isis-gomes.webp" width="640" height="360" loading="lazy" decoding="async" alt="">
+                <span class="film-play" aria-hidden="true"></span>
+              </span>
+              <span class="film-name">Coleção Isis Gomes</span>
+              <span class="film-meta"><span class="film-credit">Composição original para o filme da coleção.</span><span>1:11</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="film-link" href="./assets/video/musica-importa-manifesto.mp4">
+              <span class="film-still">
+                <img src="./assets/video/musica-importa-manifesto.webp" width="640" height="360" loading="lazy" decoding="async" alt="">
+                <span class="film-play" aria-hidden="true"></span>
+              </span>
+              <span class="film-name">Música Importa</span>
+              <span class="film-meta"><span class="film-credit">Composição original para o manifesto da festa.</span><span>2:09</span></span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="playlists" aria-labelledby="playlists-title">
@@ -141,5 +179,17 @@
       </div>
     </section>
   </main>
+  <dialog class="film-dialog" id="film-dialog" aria-labelledby="active-film-title" aria-describedby="active-film-credit">
+    <header class="film-dialog-header">
+      <div>
+        <h2 id="active-film-title"></h2>
+        <p id="active-film-credit"></p>
+      </div>
+      <form method="dialog">
+        <button type="submit" autofocus>Fechar</button>
+      </form>
+    </header>
+    <video id="film-video" controls playsinline preload="none" aria-labelledby="active-film-title"></video>
+  </dialog>
 </body>
 </html>
