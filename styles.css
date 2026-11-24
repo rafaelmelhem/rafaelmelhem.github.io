@@ -425,6 +425,51 @@ h1 { font-size: clamp(3.125rem, 7.2vw, 5.75rem); }
 .bio strong { color: var(--paper); }
 .bio a { color: var(--paper); text-underline-offset: .2em; }
 
+.artist-profiles {
+  margin-top: 1.8rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid #4d4e49;
+}
+
+.artist-profiles h3 {
+  margin: 0 0 .45rem;
+  color: var(--secondary);
+  font-size: .875rem;
+  font-weight: 400;
+}
+
+.artist-profiles ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .25rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.artist-profiles a {
+  display: grid;
+  align-content: center;
+  gap: .15rem;
+  min-height: 2.75rem;
+  padding: .4rem 0;
+  text-decoration: none;
+}
+
+.artist-profiles a span { text-decoration: underline; }
+.artist-profiles a small { color: var(--secondary); font-size: .875rem; }
+.artist-profiles a:hover span, .artist-profiles a:focus-visible span { text-decoration-thickness: 2px; }
+
+@media (max-width: 32rem) {
+  .artist-profiles ul { grid-template-columns: 1fr; }
+  .artist-profiles a {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: baseline;
+    align-content: center;
+    gap: .25rem .8rem;
+  }
+}
+
 @media (max-width: 48rem) and (min-width: 37.501rem) {
   .hero-content { padding-top: 17.25rem; }
   .hero { min-height: 34rem; }
