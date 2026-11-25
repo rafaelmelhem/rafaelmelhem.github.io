@@ -6,20 +6,21 @@
   <meta name="theme-color" content="#0e0e0e">
   <meta name="description" content="Rafael Melhem, DJ e produtor musical, também conhecido como The Soul Architect. Deep house, jazz e soul em vinil.">
   <title>Rafael Melhem — DJ e produtor musical</title>
-  <link rel="stylesheet" href="./styles.css?v=11">
+  <link rel="stylesheet" href="./styles.css?v=12">
   <script src="./player.js?v=2" defer></script>
   <script src="./films.js" defer></script>
 </head>
 <body>
+  <svg class="icon-definitions" aria-hidden="true" width="0" height="0">
+    <symbol id="external-arrow" viewBox="0 0 16 16">
+      <path d="M3 13 13 3M5 3h8v8" fill="none" stroke="currentColor"
+            stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
   <header class="site-header">
     <nav class="header-links" aria-label="Redes sociais e contato">
-      <a href="https://www.instagram.com/rafael.melhem/">Instagram</a>
-      <a href="mailto:rafael.melhem@gmail.com">
-        Contato
-        <svg aria-hidden="true" width="13" height="13" viewBox="0 0 16 16" fill="none">
-          <path d="M3 13 13 3M5 3h8v8" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+      <a class="text-link" href="https://www.instagram.com/rafael.melhem/">Instagram</a>
+      <a class="text-link" href="mailto:rafael.melhem@gmail.com">Contato</a>
     </nav>
   </header>
   <main>
@@ -57,47 +58,37 @@
             <h3 id="artist-profiles-title">Perfis de artista</h3>
             <ul>
               <li>
-                <a href="https://open.spotify.com/artist/2fLmNYRlJhcLUJXWp9Bu47">
-                  <span>Rafael Melhem</span>
-                  <small class="profile-platform">
-                    <img class="profile-spotify" src="./assets/spotify-icon-white.svg" width="23" height="22" alt="">
-                    Spotify
-                  </small>
-                </a>
-              </li>
-              <li>
-                <a href="https://open.spotify.com/artist/6p2D3zcp5QIU6c9OQC0nlm">
-                  <span lang="en">The Soul Architect</span>
-                  <small class="profile-platform">
-                    <img class="profile-spotify" src="./assets/spotify-icon-white.svg" width="23" height="22" alt="">
-                    Spotify
-                  </small>
-                </a>
-              </li>
-              <li>
-                <a href="https://soundcloud.com/rafaelmelhem">
-                  <span>Rafael Melhem</span>
-                  <small class="profile-platform">
+                <span class="profile-name">Rafael Melhem</span>
+                <div class="profile-links">
+                  <a href="https://soundcloud.com/rafaelmelhem" aria-label="Rafael Melhem no SoundCloud">
                     <img class="profile-soundcloud" src="./assets/soundcloud-logo-white.png" width="120" height="15" alt="SoundCloud">
-                  </small>
-                </a>
+                  </a>
+                  <a class="text-link" href="https://open.spotify.com/artist/2fLmNYRlJhcLUJXWp9Bu47" aria-label="Rafael Melhem no Spotify">
+                    <img src="./assets/spotify-icon-white.svg" width="23" height="22" alt="">
+                    Spotify
+                  </a>
+                </div>
+              </li>
+              <li>
+                <span class="profile-name" lang="en">The Soul Architect</span>
+                <div class="profile-links">
+                  <a class="text-link" href="https://open.spotify.com/artist/6p2D3zcp5QIU6c9OQC0nlm" aria-label="The Soul Architect no Spotify">
+                    <img src="./assets/spotify-icon-white.svg" width="23" height="22" alt="">
+                    Spotify
+                  </a>
+                </div>
               </li>
             </ul>
           </nav>
         </div>
       </div>
     </section>
-    <section class="bio" aria-labelledby="bio-title">
-      <div class="bio-inner">
-        <h2 id="bio-title">Sobre</h2>
-        <p>Rafael Melhem é DJ e produtor paulista, com lançamentos desde 2011. Seus sets em vinil aproximam o deep house do jazz e do soul. No estúdio, essa escuta aparece nos acordes de teclado e nos timbres, com referências ao house dos anos 1990.</p>
-        <p>Em 2024, foi DJ residente aos sábados no <strong>Leila Restaurante</strong>, de Tania Bulhões, em São Paulo. Ali, suas seleções iam do jazz japonês dos anos 1970 ao deep house dos anos 1990. Também já tocou no <strong>Seen</strong>, no Tivoli Mofarrej, no <strong>Matiz Bar</strong> e no <strong>Heavy House</strong>.</p>
-        <p>Também trabalhou com identidade musical para o varejo. Para a <strong>TNG</strong>, produziu um repertório original para todas as lojas da rede. O projeto obteve isenção formal de pagamento dos direitos de execução pública (dispensa de cobrança pelo Ecad). No <strong>Grupo Valdac</strong>, foi responsável pela curadoria e pela produção musical de todas as lojas da <strong>Siberian</strong>, da <strong>Crawford</strong> e da <strong>Memove</strong>.</p>
-        <p>Sob o pseudônimo <strong>The Soul Architect</strong>, dividiu com Alex Agore o EP <a href="https://rafaelmelhem.bandcamp.com/album/subliminal"><em>Subliminal</em></a>, que abriu o catálogo da <strong>ALRA Records</strong> em 2015. Sua discografia inclui também <a href="https://open.spotify.com/album/2R3NRlpwTvc8mkQRVMbxRK"><em>Voyager</em></a>, pela Abstract Theory, e <a href="https://open.spotify.com/album/6cpW4gsfW3wy8WlK2mGkQP"><em>Aerowalk</em></a>, lançado sob seu próprio nome pela ALRA. Suas produções têm o suporte de vários artistas importantes da cena, como Danilo Plessow (Motor City Drum Ensemble), Ney Faustini, Leonardo Ruas, entre outros.</p>
-      </div>
-    </section>
     <section class="films" aria-labelledby="films-title">
       <div class="films-inner">
+        <div class="work-intro">
+          <p>Meu trabalho vai do deep house, jazz e soul em vinil à composição de trilhas e à curadoria musical.</p>
+          <a class="text-link" href="#bio-title">Sobre mim</a>
+        </div>
         <h2 id="films-title">Trabalhos audiovisuais</h2>
         <ul class="film-list">
           <li>
@@ -149,25 +140,40 @@
         <ul class="playlist-list">
           <li>
             <a class="playlist-link" href="https://open.spotify.com/playlist/6TBpQk89RWdpFVePa3bH8k">
+              <img class="playlist-cover" src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a8376dbd49a8c6137b2d4725"
+                   width="300" height="300" loading="lazy" decoding="async" alt="">
               <span class="playlist-info">
                 <span class="playlist-name">selects by RAFAEL MELHEM</span>
                 <span class="playlist-publisher">COMMUN UNITY lovers</span>
-                <span class="playlist-description">Do piano de Chick Corea ao ambient de Hiroshi Yoshimura, com passagens pelo soul de Cymande e pelo house de Alex Agore.</span>
               </span>
-              <span class="playlist-action">Abrir no Spotify</span>
+              <span class="playlist-description">Do piano de Chick Corea ao ambient de Hiroshi Yoshimura, com passagens pelo soul de Cymande e pelo house de Alex Agore.</span>
+              <span class="playlist-platform"><img src="./assets/spotify-icon-white.svg" width="23" height="22" alt=""> Spotify</span>
+              <svg class="external-icon" aria-hidden="true" width="16" height="16"><use href="#external-arrow"/></svg>
             </a>
           </li>
           <li>
             <a class="playlist-link" href="https://open.spotify.com/playlist/1vTfudQoskhpSXQkxO1XhM">
+              <img class="playlist-cover" src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84cfcb12f7788100578b092700"
+                   width="300" height="300" loading="lazy" decoding="async" alt="">
               <span class="playlist-info">
                 <span class="playlist-name">Sábados no Leila: Rafael Melhem</span>
                 <span class="playlist-publisher">Alataj</span>
-                <span class="playlist-description">A seleção dos sábados no Leila vai do jazz japonês de Toshiko Akiyoshi ao deep house de Rick Wade, com um remix de Ron Trent.</span>
               </span>
-              <span class="playlist-action">Abrir no Spotify</span>
+              <span class="playlist-description">A seleção dos sábados no Leila vai do jazz japonês de Toshiko Akiyoshi ao deep house de Rick Wade, com um remix de Ron Trent.</span>
+              <span class="playlist-platform"><img src="./assets/spotify-icon-white.svg" width="23" height="22" alt=""> Spotify</span>
+              <svg class="external-icon" aria-hidden="true" width="16" height="16"><use href="#external-arrow"/></svg>
             </a>
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="bio" aria-labelledby="bio-title">
+      <div class="bio-inner">
+        <h2 id="bio-title" tabindex="-1">Sobre</h2>
+        <p>Rafael Melhem é DJ e produtor paulista, com lançamentos desde 2011. Seus sets em vinil aproximam o deep house do jazz e do soul. No estúdio, essa escuta aparece nos acordes de teclado e nos timbres, com referências ao house dos anos 1990.</p>
+        <p>Em 2024, foi DJ residente aos sábados no <strong>Leila Restaurante</strong>, de Tania Bulhões, em São Paulo. Ali, suas seleções iam do jazz japonês dos anos 1970 ao deep house dos anos 1990. Também já tocou no <strong>Seen</strong>, no Tivoli Mofarrej, no <strong>Matiz Bar</strong> e no <strong>Heavy House</strong>.</p>
+        <p>Também trabalhou com identidade musical para o varejo. Para a <strong>TNG</strong>, produziu um repertório original para todas as lojas da rede. O projeto obteve isenção formal de pagamento dos direitos de execução pública (dispensa de cobrança pelo Ecad). No <strong>Grupo Valdac</strong>, foi responsável pela curadoria e pela produção musical de todas as lojas da <strong>Siberian</strong>, da <strong>Crawford</strong> e da <strong>Memove</strong>.</p>
+        <p>Sob o pseudônimo <strong>The Soul Architect</strong>, dividiu com Alex Agore o EP <a href="https://rafaelmelhem.bandcamp.com/album/subliminal"><em>Subliminal</em></a>, que abriu o catálogo da <strong>ALRA Records</strong> em 2015. Sua discografia inclui também <a href="https://open.spotify.com/album/2R3NRlpwTvc8mkQRVMbxRK"><em>Voyager</em></a>, pela Abstract Theory, e <a href="https://open.spotify.com/album/6cpW4gsfW3wy8WlK2mGkQP"><em>Aerowalk</em></a>, lançado sob seu próprio nome pela ALRA. Suas produções têm o suporte de vários artistas importantes da cena, como Danilo Plessow (Motor City Drum Ensemble), Ney Faustini, Leonardo Ruas, entre outros.</p>
       </div>
     </section>
     <section class="press" aria-labelledby="press-title">
@@ -177,42 +183,42 @@
           <li>
             <a class="press-link" href="https://alataj.com.br/trend/uma-selecao-musical-especial-ambienta-as-noites-de-sabado-no-leila-rafael-melhem">
               <span class="press-title">Uma seleção musical especial ambienta as noites de sábado no Leila: Rafael Melhem</span>
-              <span class="press-arrow" aria-hidden="true">↗</span>
+              <svg class="external-icon" aria-hidden="true" width="16" height="16"><use href="#external-arrow"/></svg>
               <span class="press-source">Alataj · 2024</span>
             </a>
           </li>
           <li>
             <a class="press-link" href="https://alataj.com.br/papo-de-estudio/rafael-melhem-disseca-5-elementos-para-um-bom-e-verdadeiro-deep-house">
               <span class="press-title">Papo de Estúdio | Rafael Melhem disseca 5 elementos para um bom (e verdadeiro) Deep House</span>
-              <span class="press-arrow" aria-hidden="true">↗</span>
+              <svg class="external-icon" aria-hidden="true" width="16" height="16"><use href="#external-arrow"/></svg>
               <span class="press-source">Alataj · 2022</span>
             </a>
           </li>
           <li>
             <a class="press-link" href="https://alumni.usp.br/en/alumni-em-destaque-rafael-melhem/">
               <span class="press-title">Alumni em destaque: Rafael Melhem</span>
-              <span class="press-arrow" aria-hidden="true">↗</span>
+              <svg class="external-icon" aria-hidden="true" width="16" height="16"><use href="#external-arrow"/></svg>
               <span class="press-source">Alumni USP · 2019</span>
             </a>
           </li>
           <li>
             <a class="press-link" href="https://pistonrecordings.bandcamp.com/album/this-feeling-ep">
               <span class="press-title" lang="en">This Feeling EP</span>
-              <span class="press-arrow" aria-hidden="true">↗</span>
+              <svg class="external-icon" aria-hidden="true" width="16" height="16"><use href="#external-arrow"/></svg>
               <span class="press-source">Piston Recordings · 2019</span>
             </a>
           </li>
           <li>
             <a class="press-link" href="https://alataj.com.br/troally/tsa-feelthelove">
               <span class="press-title">The Soul Architect e L_cio falam sobre o processo criativo do EP Feel The Love</span>
-              <span class="press-arrow" aria-hidden="true">↗</span>
+              <svg class="external-icon" aria-hidden="true" width="16" height="16"><use href="#external-arrow"/></svg>
               <span class="press-source">Alataj · 2016</span>
             </a>
           </li>
           <li>
             <a class="press-link" href="https://www.meon.com.br/noticias/meon/blog-e-colunas/social/noite-cult-com-jazz">
               <span class="press-title">Noite cult com jazz</span>
-              <span class="press-arrow" aria-hidden="true">↗</span>
+              <svg class="external-icon" aria-hidden="true" width="16" height="16"><use href="#external-arrow"/></svg>
               <span class="press-source">Meon · 2016</span>
             </a>
           </li>
